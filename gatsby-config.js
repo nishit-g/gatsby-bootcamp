@@ -15,13 +15,13 @@ module.exports = {
   /* Your site config here */
   plugins: [
     'gatsby-plugin-sass',
-    'gatsby-transformer-remark',
     {
       resolve:'gatsby-source-filesystem',
       options: {
         name: `source`,
-        path: `${__dirname}/src/pages/`,
+        path: `${__dirname}/src/`,
       },
     },
+    'gatsby-transformer-remark',
   ],
 }
