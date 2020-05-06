@@ -4,7 +4,16 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+ 
+
 module.exports = {
+  siteMetadata: {
+    title:'Trying Gatsby',
+    author:'Nishit Gupta'
+  },
+ 
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    'gatsby-plugin-sass'
+  ],
 }
