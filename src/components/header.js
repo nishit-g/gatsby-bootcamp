@@ -4,9 +4,20 @@ import headerStyles from './header.module.scss'
 
 
 const Header=()=>{
+    const data = useStaticQuery(graphql`
+        query{
+            site{
+                siteMetadata{
+                    title
+                }
+            }
+        }
+    `)
     return(
         <header className={headerStyles.header}>
-                <h1 className={headerStyles.title}>Nishit Gupta</h1>
+                <h1 className={headerStyles.title}>
+                    {data.site.siteMetadata.title}
+                </h1>
         <nav>
             <ul className={headerStyles.navList}>
                 <li>
